@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using ColossalFramework;
 using ColossalFramework.UI;
 using ICities;
@@ -101,6 +100,7 @@ namespace TrainCarSelector
         private UIButton _addButton;
         private UIButton _removeButton;
         private UIButton _resetButton;
+        private UIButton _applyLineButton;
         private UITextField _countField;
         private CountRefresher _refresher;
 
@@ -115,18 +115,20 @@ namespace TrainCarSelector
 
             _container = parent.AddUIComponent<UIPanel>();
             _container.name = "TrainCarSelectorPanel";
-            _container.size = new Vector2(126, 25);
-            _container.relativePosition = new Vector3(parent.width - 136, 40);
+            _container.size = new Vector2(168, 25);
+            _container.relativePosition = new Vector3(parent.width - 178, 40);
 
-            _resetButton  = CreateButton(_container, "\u21A9", new Vector3( 0, 0), 25);
-            _removeButton = CreateButton(_container, "\u2212", new Vector3(28, 0), 25);
-            _countField   = CreateTextField(_container,        new Vector3(56, 1));
-            _addButton    = CreateButton(_container, "+",      new Vector3(98, 0), 25);
+            _resetButton      = CreateButton(_container, "\u21A9", new Vector3(  0, 0), 25);
+            _removeButton     = CreateButton(_container, "\u2212", new Vector3( 28, 0), 25);
+            _countField       = CreateTextField(_container,        new Vector3( 56, 1));
+            _addButton        = CreateButton(_container, "+",      new Vector3( 98, 0), 25);
+            _applyLineButton  = CreateButton(_container, "\u2225", new Vector3(126, 0), 25);
             _resetButton.textScale = 0.85f;
 
-            _addButton.eventClick    += OnAddClicked;
-            _removeButton.eventClick += OnRemoveClicked;
-            _resetButton.eventClick  += OnResetClicked;
+            _addButton.eventClick       += OnAddClicked;
+            _removeButton.eventClick    += OnRemoveClicked;
+            _resetButton.eventClick     += OnResetClicked;
+            _applyLineButton.eventClick += OnApplyLineClicked;
             _countField.eventTextSubmitted += OnCountSubmitted;
             infoPanel.component.eventVisibilityChanged += OnPanelVisibilityChanged;
 
@@ -166,6 +168,14 @@ namespace TrainCarSelector
             if (!int.TryParse(text, out target)) return;
             TrainCarLogic.SetWagonCount(id, target);
             RefreshCount();
+        }
+
+        private void OnApplyLineClicked(UIComponent c, UIMouseEventParameter e)
+        {
+            ushort id = GetSelectedLeadVehicle();
+            if (id == 0) return;
+            int count = TrainCarLogic.GetTotalCount(id);
+            TrainCarLogic.ApplyWagonCountToLine(id, count);
         }
 
         private void OnPanelVisibilityChanged(UIComponent c, bool visible)
@@ -410,6 +420,32 @@ namespace TrainCarSelector
                 int next = GetTotalCount(leadId);
                 if (next == current) break;
                 current = next;
+            }
+        }
+
+        /// <summary>Applique le nombre de wagons a tous les trains du meme type 
+        /// sur la meme ligne de transport que le train donne.</summary>
+        public static void ApplyWagonCountToLine(ushort leadId, int targetCount)
+        {
+            if (!IsRailVehicle(leadId)) return;
+            
+            Vehicle[] buf = VehicleManager.instance.m_vehicles.m_buffer;
+            ushort lineId = buf[leadId].m_transportLine;
+            if (lineId == 0) return;
+
+            VehicleInfo targetInfo = buf[leadId].Info;
+            TransportLine line = TransportManager.instance.m_lines.m_buffer[lineId];
+            
+            ushort vehicleId = line.m_vehicles.m_head;
+            int safety = SafetyLimit * 10;
+            
+            while (vehicleId != 0 && safety-- > 0)
+            {
+                ushort lead = GetLeadVehicle(vehicleId);
+                if (buf[lead].Info == targetInfo)
+                    SetWagonCount(lead, targetCount);
+                
+                vehicleId = buf[vehicleId].m_nextLineVehicle;
             }
         }
 
