@@ -1,0 +1,34 @@
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\TrainCarSelector.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\TrainCarSelector.pdb
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\Assembly-CSharp.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\CitiesHarmony.API.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\ColossalManaged.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\ICities.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\UnityEngine.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\UnityEngine.Networking.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\UnityEngine.UI.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\PopsApiWrapper.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\obj\Debug\TrainCarSelector.csproj.AssemblyReference.cache
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\obj\Debug\TrainCarSelector.csproj.CoreCompileInputs.cache
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\obj\Debug\TrainCar.17FC707F.Up2Date
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\obj\Debug\TrainCarSelector.dll
+C:\Users\alexg\source\repos\TrainCarSelector\TrainCarSelector\obj\Debug\TrainCarSelector.pdb
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\obj\Debug\TrainCarSelector.csproj.AssemblyReference.cache
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\obj\Debug\TrainCarSelector.csproj.CoreCompileInputs.cache
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\TrainCarSelector.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\TrainCarSelector.pdb
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\Assembly-CSharp.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\CitiesHarmony.API.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\ColossalManaged.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\ICities.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\UnityEngine.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\UnityEngine.Networking.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\UnityEngine.UI.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\PopsApiWrapper.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\obj\Debug\TrainCar.17FC707F.Up2Date
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\obj\Debug\TrainCarSelector.dll
+C:\Users\alexg\source\repos\TrainCarSelector 2\TrainCarSelector\obj\Debug\TrainCarSelector.pdb
